@@ -1,0 +1,9 @@
+node_modules
+env
+.env
+# Local Netlify folder
+.netlify
+
+.parcel-cache
+.vscode
+dist
