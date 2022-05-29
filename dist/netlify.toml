@@ -1,0 +1,13 @@
+[build]
+ functions="functions"
+
+ [[redirects]]
+  to="/.netlify/functions/api/:splat"
+  from="/*"
+  status=200
+
+  [[headers]]
+  
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "http://localhost:5501"
