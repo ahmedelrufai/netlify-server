@@ -9,7 +9,7 @@ require("dotenv").config();
 const app = express();
 
 // const PORT = process.env.PORT || 5000;
-const uri = process.env.ATLAS_URI;
+const uri = process.env.MONGO_URI;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
@@ -17,10 +17,10 @@ mongoose.connect(uri, {
 //import router from './home/elrufai/Desktop/project/api/route/user.js';
 const connection = mongoose.connection;
 connection.once("open", () => console.log("database connection established"));
+app.use(express.static("./public"));
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
-app.use("./public", express.static("public"));
 
 const router = require("../api/route/user");
 const resumeRouter = require("../api/route/resume");

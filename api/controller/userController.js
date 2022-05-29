@@ -125,7 +125,7 @@ const userCtrl = {
         <div style="width:100%;height:100%;display:flex;flex-direction:column;margin-top:100px;align-items:center;justify-content:flex-start;">
         <h1>Welcome to CVSTUDIO</h1>
         <p>verification successfull</p>
-        <a href="https://cvstudio.io/cvengine.html">login</a>
+        <a href="http://127.0.0.1:5501/cvengine.html">login</a>
         </div>`;
     res.send(marckup);
   },
