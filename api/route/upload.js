@@ -20,7 +20,7 @@ let corsOptions = {
 }
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null,"./useruploads/")
+    cb(null, path.join(__dirname,"./useruploads/"))
   },
   filename: function (req, file, cb) {
     cb(null, new Date().toISOString() + file.originalname);
