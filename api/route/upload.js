@@ -44,7 +44,8 @@ uploadRouter.post(
   upload.single("file"),
   cors(corsOptions),
   (req, res) => {
-    res.json({ path: req.file.path });
+
+    res.json({ path: req.file.path,anypro:path.resolve('./useruploads')});
     if (!req.files || Object.keys(req.files).length === 0)
       return res.json({ msg: "No files were uploaded." });
 
